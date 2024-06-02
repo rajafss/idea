@@ -15,9 +15,7 @@ class CrmLead(models.Model):
     argument_ids = fields.Many2many("argument.argument" ,string="Argument" , related="product.argument_ids")
 
     prospection_stage_id = fields.Many2many('prospection.stage',  related="product.prospection_stage_id")
-
     description = fields.Text(related="product.description")
-
     partner_id = fields.Many2one(
         'res.partner', string='Prospect', check_company=True, index=True, tracking=10,
         domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]",
@@ -31,7 +29,6 @@ class CrmLead(models.Model):
     phone = fields.Char(
         'Phone', tracking=50,
         compute='_compute_phone', readonly=False, store=True)
-
 
     # we need a function compute to genrate email and phone of partner
     def _compute_email_from(self):

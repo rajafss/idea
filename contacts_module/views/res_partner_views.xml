@@ -49,7 +49,7 @@
                                     <field name="is_industry" invisible="1"/>
                                      <field name="user_ids" invisible="1"/>
                                     <field name="parent_id" invisible="1"/>
-                                    <field name="name" string="Denomination"/>
+                                    <field name="name" string="Denomination" required="1"/>
                                     <field name="reason_Social"/>
                                     <field name="legal_status"/>
                                     <field name="responsible"/>
@@ -187,15 +187,15 @@
                                 <form string="Contact / Address">
                                     <sheet>
                                         <field name="type" required="1" widget="radio" options="{'horizontal': true}"/>
+                                        <field name="is_opposite"/>
                                         <field name="parent_id" invisible="1"/>
                                         <hr/>
                                         <group>
                                             <group>
-                                                <field name="name" string="contact name" attrs="{'required' : [('type', '=', 'contact')]}"/>
-                                                <field name="title"  options="{'no_open': True}" placeholder="e.g. Mr."
-                                                    attrs="{'invisible': [('type','!=', 'contact')]}"/>
-                                                <field name="function"
-                                                    attrs="{'invisible': [('type','!=', 'contact')]}"/>
+                                                <field name="is_opposite"/>
+                                                <field name="name" string="contact name"/>
+                                                <field name="title"  options="{'no_open': True}" placeholder="e.g. Mr."/>
+                                                <field name="function"/>
                                             </group>
                                             <group>
                                                 <field name="email" widget="email"/>
@@ -448,11 +448,11 @@
 
 <!--        action for new view of Idea res.partner  -->
         <record id="action_partner_idea_form" model="ir.actions.act_window">
-            <field name="name">Idea Contacts</field>
+            <field name="name">Contacts</field>
             <field name="res_model">res.partner</field>
             <field name="view_mode">tree,form,kanban,activity</field>
             <field name="search_view_id" ref="contacts_module.view_search_partner"/>
-            <field name="domain">[('is_industry', '=', True)]</field>
+            <field name="domain">[('is_industry', '=', True),('is_opposite', '=', False)]</field>
             <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('contacts_module.idea_partner_tree')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('contacts_module.idea_view_partner_form')}),
@@ -469,7 +469,7 @@
         </record>
 
         <menuitem id="idea_res_partner_menu"
-        name="Idea Contacts"
+        name="Contacts"
         parent="contacts.menu_contacts"
         action="action_partner_idea_form"
         sequence = "1"/>

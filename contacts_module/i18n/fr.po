@@ -239,7 +239,7 @@ msgstr "E-mail du siège"
 #: model:ir.model.fields,field_description:contacts_module.field_res_users__factory_ids
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form
 msgid "Factory"
-msgstr "Usine"
+msgstr "Usines"
 
 #. module: contacts_module
 #: model_terms:ir.ui.view,arch_db:contacts_module.idea_view_partner_form

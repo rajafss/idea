@@ -95,6 +95,11 @@
             </field>
         </record>
 
+         <record model="ir.actions.act_window" id="crm.crm_lead_action_pipeline">
+            <field name="res_model">crm.lead</field>
+             <field name="limit">10</field>
+        </record>
+
         <!--     view_crm_lead_quick_create_form_view   -->
         <record id="view_crm_lead_form_inherit" model="ir.ui.view">
             <field name="name">crm.lead.form.inherit</field>
