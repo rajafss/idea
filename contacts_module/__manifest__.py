@@ -5,7 +5,7 @@
     'depends': ['base',
                 'mail',
                 'contacts',
-                'crm'],
+                ],
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',

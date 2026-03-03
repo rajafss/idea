@@ -1,5 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <data>
+
+    <record id="module_category_crm" model="ir.module.category">
+            <field name="name">CRM</field>
+            <field name="sequence">3</field>
+        </record>
+
+     <record id="group_crm_user" model="res.groups">
+            <field name="name">User: All Documents</field>
+            <field name="category_id" ref="crm_module.module_category_crm"/>
+        </record>
+
+        <record id="group_crm_manager" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="crm_module.module_category_crm"/>
+            <field name="implied_ids" eval="[(4, ref('group_crm_user'))]"/>
+        </record>
 
 <!--        rule user can only edit prospection in new stage-->
         <record id="record_rule_no_edit" model="ir.rule">
@@ -24,5 +40,4 @@
              <field name="perm_create" eval="True"/>
              <field name="perm_unlink" eval="False"/>
         </record>
-    </data>
 </odoo>
