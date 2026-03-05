@@ -5,6 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="odoo-16.0" />
+    <orderEntry type="module" module-name="odoo" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />

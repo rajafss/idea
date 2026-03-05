@@ -1,6 +1,4 @@
-# CRM
-
-CRM Module
+# CRM Module
 
 ### Contributors
 - IDEA Team.

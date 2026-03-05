@@ -9,7 +9,7 @@
 <!--                just the administrator can definitively close a prospecting -->
 <!--                we need add groups sale manager here-->
                 <button name="%(crm.crm_lead_lost_action)d" position="attributes">
-                    <attribute name="groups">sales_team.group_crm_manager</attribute>
+                    <attribute name="groups">crm_module.group_crm_manager</attribute>
                     <attribute name="string">Final closure</attribute>
                 </button>
 
