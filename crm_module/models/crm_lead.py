@@ -1,5 +1,7 @@
-
+from lxml import etree
 from odoo import models, fields, api
+import json
+
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
@@ -30,6 +32,9 @@ class CrmLead(models.Model):
         'Phone', tracking=50,
         compute='_compute_phone', readonly=False, store=True)
 
+
+
+
     # we need a function compute to genrate email and phone of partner
     def _compute_email_from(self):
         """To get the default email of contacts,,, we get just the email factory"""
@@ -40,9 +45,6 @@ class CrmLead(models.Model):
         """To get the default phone of contacts,,, we get just the phone factory"""
         for lead in self:
             lead.phone = lead.partner_id.phone_factory
-
-
-
 
 
 

@@ -4,7 +4,7 @@
     'version': '16.0.0.0',
     'depends': ['base',
                 'mail',
-                'contacts',
+                'contacts','crm'
                 ],
     'data': [
         'security/security.xml',
@@ -13,5 +13,8 @@
         'views/legal_status_views.xml',
         'views/res_partner_views.xml',
     ],
+
+    'license': 'LGPL-3',
+    'installable': True,
 
 }

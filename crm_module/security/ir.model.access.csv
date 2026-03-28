@@ -11,5 +11,14 @@ access_argument,argument_manager,model_argument_argument,contacts_module.managem
 access_prospection_user,prospection_stage_user,model_prospection_stage,base.group_user,1,1,1,1
 access_prospection,prospection_stage,model_prospection_stage,contacts_module.management_contacts_group,1,1,1,1
 
+sales_team.access_crm_tag_salesman,group_crm_user.crm_tag salesman,sales_team.model_crm_tag,crm_module.group_crm_user,1,1,1,0
+sales_team.access_crm_tag_manager,group_crm_user.crm_tag manager,sales_team.model_crm_tag,crm_module.group_crm_manager,1,1,1,1
+
+access_crm_lead_manager,crm.lead.manager,crm.model_crm_lead,crm_module.group_crm_manager,1,1,1,1
+access_crm_lead,crm.lead,crm.model_crm_lead,crm_module.group_crm_user,1,1,1,0
+
+access_sale_order_manager,sale.order.manager,sale.model_sale_order,crm_module.group_crm_user,1,1,1,0
+
+
 
 

@@ -41,6 +41,7 @@ class Partner(models.Model):
     product = fields.Char()
     participant = fields.Char( string='Country of foreign participant')
     date = fields.Char(string=" Production entry date")
+    production_entry_date = fields.Date(string=" Production entry date")
     capital = fields.Integer(string="Share capital in DT" )
     job = fields.Integer()
     street_seat = fields.Char()
